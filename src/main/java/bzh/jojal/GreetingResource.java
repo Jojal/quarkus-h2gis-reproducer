@@ -33,6 +33,9 @@ public class GreetingResource {
         Query nativeQuery = em.createNativeQuery("CALL SHPWrite('/Users/jordan/Documents/T/Dev/postgis/gis/h2/area.shp', '(SELECT geom FROM LOCATION where id=1)')");
         nativeQuery.executeUpdate();
 
+        nativeQuery = em.createNativeQuery("CALL KMLWrite('/Users/jordan/Documents/T/Dev/postgis/gis/h2/area.kml', '(SELECT geom FROM LOCATION)')");
+        nativeQuery.executeUpdate();
+
         int firstResult = nativeQuery.getFirstResult();
 
         System.err.println(firstResult);
