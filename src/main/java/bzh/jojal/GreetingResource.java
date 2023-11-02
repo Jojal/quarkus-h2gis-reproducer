@@ -1,8 +1,5 @@
 package bzh.jojal;
 
-import io.quarkus.hibernate.orm.panache.Panache;
-import io.quarkus.hibernate.orm.panache.PanacheEntityBase;
-import io.quarkus.hibernate.orm.panache.PanacheQuery;
 import jakarta.inject.Inject;
 import jakarta.persistence.EntityManager;
 import jakarta.persistence.Query;
@@ -31,6 +28,15 @@ public class GreetingResource {
         if(!resultList.isEmpty()) {
             System.err.println(resultList.get(0));
         }
+
+
+        Query nativeQuery = em.createNativeQuery("CALL SHPWrite('/Users/jordan/Documents/T/Dev/postgis/gis/h2/area.shp', '(SELECT geom FROM LOCATION where id=1)')");
+        nativeQuery.executeUpdate();
+
+        int firstResult = nativeQuery.getFirstResult();
+
+        System.err.println(firstResult);
+
         return "Hello from RESTEasy Reactive";
     }
 }
