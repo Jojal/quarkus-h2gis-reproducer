@@ -3,8 +3,7 @@ package bzh.jojal;
 import io.quarkus.hibernate.orm.panache.PanacheEntity;
 import jakarta.persistence.Entity;
 import jakarta.persistence.Table;
-import org.locationtech.jts.geom.Geometry;
-import org.locationtech.jts.geom.Point;
+import org.geolatte.geom.Geometry;
 
 
 /**

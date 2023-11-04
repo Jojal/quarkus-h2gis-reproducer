@@ -2,6 +2,7 @@ package bzh.jojal;
 
 import io.quarkus.runtime.annotations.RegisterForReflection;
 import org.h2.mvstore.db.NullValueDataType;
+import org.h2.server.TcpServer;
 import org.h2gis.functions.factory.H2GISFunctions;
 import org.h2gis.functions.io.kml.KMLWrite;
 import org.h2gis.functions.io.shp.SHPWrite;
