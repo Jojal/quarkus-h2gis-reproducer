@@ -87,6 +87,11 @@
      </dependency>
 
     <dependency>
+      <groupId>io.quarkus</groupId>
+      <artifactId>quarkus-flyway</artifactId>
+    </dependency>
+
+    <dependency>
       <groupId>org.geolatte</groupId>
       <artifactId>geolatte-geojson</artifactId>
       <version>1.8.2</version>
